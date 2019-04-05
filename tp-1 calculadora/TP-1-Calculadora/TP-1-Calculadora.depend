@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1554487214 source:c:\users\nick\desktop\tp-1 calculadora\tp-1-calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn-funciones.h"
+
+1554487212 c:\users\nick\desktop\tp-1 calculadora\tp-1-calculadora\utn-funciones.h
+
+1554487671 source:c:\users\nick\desktop\tp-1 calculadora\tp-1-calculadora\utn-funciones.c
+	<stdio.h>
+	<stdlib.h>
+
