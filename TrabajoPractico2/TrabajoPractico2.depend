@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1557396598 source:c:\users\nick\desktop\workspace\trabajopractico2\funciones.c
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557369709 c:\users\nick\desktop\workspace\trabajopractico2\validaciones.h
+
+1557428454 source:c:\users\nick\desktop\workspace\trabajopractico2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"arrayEmployees.h"
+
+1557369708 source:c:\users\nick\desktop\workspace\trabajopractico2\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1557369709 c:\users\nick\desktop\workspace\trabajopractico2\funciones.h
+
+1557393798 c:\users\nick\desktop\workspace\trabajopractico2\arrayemployees.h
+
+1557427835 source:c:\users\nick\desktop\workspace\trabajopractico2\arrayemployees.c
+	"arrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
