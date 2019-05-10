@@ -31,3 +31,35 @@
 	<string.h>
 	"funciones.h"
 
+1557508434 source:c:\users\nick\desktop\workspace\final\trabajopractico2\arrayemployees.c
+	"arrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1557504709 c:\users\nick\desktop\workspace\final\trabajopractico2\arrayemployees.h
+
+1557417064 c:\users\nick\desktop\workspace\final\trabajopractico2\funciones.h
+
+1557417064 source:c:\users\nick\desktop\workspace\final\trabajopractico2\funciones.c
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557417064 c:\users\nick\desktop\workspace\final\trabajopractico2\validaciones.h
+
+1557505849 source:c:\users\nick\desktop\workspace\final\trabajopractico2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"arrayEmployees.h"
+
+1557417064 source:c:\users\nick\desktop\workspace\final\trabajopractico2\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+

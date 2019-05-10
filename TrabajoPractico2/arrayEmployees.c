@@ -106,9 +106,8 @@ void printArray(Employee* lista, int len)
             printf ("\nNombre del empleado: %s ",lista[i].name);
             printf ("\nApellido del empleado: %s ",lista[i].lastName);
             printf ("\nSector del empleado: %d ",lista[i].sector);
+            printf ("\nEmpleado id: %d ",lista[i].id);
             printf ("\nSalario del empleado: %2.f ",lista[i].salary);
-            printf ("\nId del empleado: %d ",lista[i].id);
-            printf ("\nPosicion: %d ",i);
             printf ("\nEstado : %d \n",lista[i].isEmpty);
         }
     }
@@ -191,20 +190,20 @@ int modifyEmployees(Employee* lista, int id, int len)
 
     if (lista!=NULL && len>0)
     {
-        fflush(stdin);
+        fflush(stdin);//__fpurge(stdin);
         posicion=findEmployeeById(lista,id,len);
         if (posicion!=-1)
         {
             while (opcion!=5)
             {
-                fflush(stdin);
+                fflush(stdin);//__fpurge(stdin);
                 getInt("\n1-Modificar nombre.\n2-Modificar apellido.\n3-Modificar sector.\n4-Modificar salario.\n"
                        "5-Salir de modificacion.\nINGRESE UNA OPCION:\n","Error, opcion incorrecta.\n",1,5,TRIES,&opcion);
 
                 switch(opcion)
                 {
                 case 1:
-                    fflush(stdin);
+                    fflush(stdin);//__fpurge(stdin);
                     if (getName("\nIngrese nuevo nombre: \n","Error, nombre no valido.\n",2,51,TRIES,lista[posicion].name)==0)
                     {
                        printf("Modificacion con exito.\n");
@@ -214,7 +213,7 @@ int modifyEmployees(Employee* lista, int id, int len)
                         }
                     break;
                 case 2:
-                    fflush(stdin);
+                    fflush(stdin);//__fpurge(stdin);
                     if (getApellido("\nIngrese nuevo apellido: \n","Error, apellido no valido.\n",2,51,TRIES,lista[posicion].lastName)==0)
                     {
                         printf("Modificacion con exito.\n");
@@ -224,7 +223,7 @@ int modifyEmployees(Employee* lista, int id, int len)
                         }
                     break;
                 case 3:
-                    fflush(stdin);
+                    fflush(stdin);//__fpurge(stdin);
                     if(getInt("\nIngrese el nuevo sector: 1-Sector uno.\n2-Sector dos.\n3-Sector tres.\n","Error, sector no valido.",1,3,TRIES,&auxSector)==0)
                     {
                         lista[posicion].sector=auxSector;
@@ -235,7 +234,7 @@ int modifyEmployees(Employee* lista, int id, int len)
                         }
                     break;
                 case 4:
-                    fflush(stdin);
+                    fflush(stdin);//__fpurge(stdin);
                     if (getFloat("\nIngrese el salario nuevo: \n","Error, salario no valido.\n",15000,30000,TRIES,&auxSalary)==0)
                     {
                         lista[posicion].salary=auxSalary;
@@ -258,13 +257,13 @@ int modifyEmployees(Employee* lista, int id, int len)
     return retorno;
 }
 
-/** \brief Ordena el array de empleados por apellido y sector de manera ascendente o descendente.
+/** \brief Ordena el array de empleados por apellido y sector de manera descendente.
  * \param Employee* lista puntero al array de empleados.
  * \param int order, 1 indica UP (ascendente) 0 indica DOWN (descendente)
  *\param int len, limite del array de empleados.
  * \return Retorna -1 si el puntero es nulo o el limite es menor a 0, 0 si salio todo bien y fue ordenado con exito.
  */
-int sortEmployees(Employee* lista, int order, int len)
+int sortEmployeesUno(Employee* lista, int order, int len)
 {
     int i;
     int j;
@@ -301,7 +300,25 @@ int sortEmployees(Employee* lista, int order, int len)
                 retorno = 0;
                 }
             }
-        }else if(order==0)
+        }
+    }
+    return retorno;
+}
+/** \brief Ordena el array de empleados por apellido y sector de manera ascendente.
+ * \param Employee* lista puntero al array de empleados.
+ * \param int order, 1 indica UP (ascendente) 0 indica DOWN (descendente)
+ *\param int len, limite del array de empleados.
+ * \return Retorna -1 si el puntero es nulo o el limite es menor a 0, 0 si salio todo bien y fue ordenado con exito.
+ */
+int sortEmployeesCero(Employee* lista, int order, int len)
+{
+    int i;
+    int j;
+    Employee buffer;
+    int retorno = -1;
+    if(lista!= NULL && len > 0)
+    {
+        if(order==0)
         {
              for(i=0; i<=len; i++)
             {
@@ -335,11 +352,14 @@ int sortEmployees(Employee* lista, int order, int len)
     return retorno;
 }
 
+
+
 /** \brief Calcula el salario promedio, el total de los salarios y la cantidad de empleados que superaron el salario promedio.
  * \param Employee* lista puntero al array de empleados.
  * \param int len, limite del array de empleados.
  * \return retorna -1 si el puntero es nulo o el limite es menor a 0, retorna 0 si salio todo bien.
  */
+
 int averageSalary(Employee* lista, int len)
 {
     int i;

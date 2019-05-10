@@ -5,8 +5,7 @@
 #include "arrayEmployees.h"
 #define QTY_EMPLEADOS 1000
 #define TRIES 3
-#define UP 1
-#define DOWN 0
+
 int main()
 {
     int opcion=0;
@@ -22,7 +21,7 @@ int main()
     Employee empleados [QTY_EMPLEADOS];
     initEmployees(empleados,QTY_EMPLEADOS);
 
-    /*Utilizar para probar
+    //Utilizar para probar
     strcpy(empleados[0].name,"Daniela");
     strcpy(empleados[0].lastName,"Moreno");
     empleados[0].id=0;
@@ -50,7 +49,7 @@ int main()
     empleados[3].salary=30000;
     empleados[3].sector=1;
     empleados[3].isEmpty=0;
-    flag=1;*/
+    flag=1;
 
     while (opcion!=7)
     {
@@ -64,7 +63,7 @@ int main()
                    case 1:
                        if (findEmptyPlace(empleados,QTY_EMPLEADOS,&posLibre)==0)
                        {
-                           fflush(stdin);
+                           fflush(stdin);//__fpurge(stdin);
                             if (getName("Ingrese nombre del empleado.\n","Error, nombre no valido.\n",2,51,TRIES,auxName)==0 &&
                             getApellido("Ingrese apellido:\n","Error, apellido no valido.\n",2,51,TRIES,auxLastName)==0 &&
                             getFloat("Ingrese salario (Minimo 15.000 Maximo 30000):\n","Error,salario no valido.\n",15000,30000,TRIES,&auxSalary)==0 &&
@@ -121,15 +120,16 @@ int main()
                    case 5:
                        if (flag==1)
                        {
+                           fflush(stdin);//__fpurge(stdin);
                            getInt("\n0-Ordena descendente.\n1-Ordena ascendente.\n2-Salir de ordenamiento.\nINGRESE OPCION: \n","Error, opcion no valida.",0,2,TRIES,&ordena);
                            switch (ordena)
                            {
-                           case DOWN:
-                               sortEmployees(empleados,DOWN,QTY_EMPLEADOS);
+                           case 0:
+                               sortEmployeesCero(empleados,0,QTY_EMPLEADOS);
                                printArray(empleados, QTY_EMPLEADOS);
                             break;
-                           case UP:
-                               sortEmployees(empleados,UP,QTY_EMPLEADOS);
+                           case 1:
+                               sortEmployeesUno(empleados,1,QTY_EMPLEADOS);
                                printArray(empleados, QTY_EMPLEADOS);
                             break;
                            case 2:
