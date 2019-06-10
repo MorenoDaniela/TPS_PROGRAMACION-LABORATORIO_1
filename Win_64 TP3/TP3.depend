@@ -1,0 +1,163 @@
+# depslib dependency file v1.0
+1533062952 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.c
+
+1533063050 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/LinkedList.h
+
+1533062926 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533062952 source:/home/mauro/Descargas/TP3/Linux_64/Employee.c
+
+1533066103 source:/home/mauro/Descargas/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/TP3/Linux_64/LinkedList.h
+
+1533066103 /home/mauro/Descargas/TP3/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533145792 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/LinkedList.h
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.h
+
+1533118898 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.c
+
+1533145890 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559808915 source:c:\users\pc\desktop\workspace\tp3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"funciones.h"
+	"Controller.h"
+
+1533133022 c:\users\pc\desktop\workspace\tp3\win_64\linkedlist.h
+
+1559804778 c:\users\pc\desktop\workspace\tp3\win_64\employee.h
+
+1533133022 c:\users\pc\desktop\workspace\tp3\win_64\parser.h
+
+1559808748 source:c:\users\pc\desktop\workspace\tp3\win_64\employee.c
+	"Employee.h"
+	"validaciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1559804640 c:\users\pc\desktop\workspace\tp3\win_64\validaciones.h
+
+1559804640 source:c:\users\pc\desktop\workspace\tp3\win_64\funciones.c
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1559808611 source:c:\users\pc\desktop\workspace\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"funciones.h"
+
+1559808611 c:\users\pc\desktop\workspace\tp3\win_64\controller.h
+
+1559804656 c:\users\pc\desktop\workspace\tp3\win_64\funciones.h
+
+1559804639 source:c:\users\pc\desktop\workspace\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559804640 source:c:\users\pc\desktop\workspace\tp3\win_64\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1560151673 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\employee.c
+	"Employee.h"
+	"validaciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1559921286 c:\users\pc\desktop\workspace\tp3\win_64 tp3\employee.h
+
+1559804640 c:\users\pc\desktop\workspace\tp3\win_64 tp3\validaciones.h
+
+1559804640 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\funciones.c
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1560152071 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"funciones.h"
+
+1533133022 c:\users\pc\desktop\workspace\tp3\win_64 tp3\linkedlist.h
+
+1559918940 c:\users\pc\desktop\workspace\tp3\win_64 tp3\controller.h
+
+1559804656 c:\users\pc\desktop\workspace\tp3\win_64 tp3\funciones.h
+
+1560150163 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559804640 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1560152517 source:c:\users\pc\desktop\workspace\tp3\win_64 tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"funciones.h"
+	"Controller.h"
+
+1533133022 c:\users\pc\desktop\workspace\tp3\win_64 tp3\parser.h
+
