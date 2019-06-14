@@ -18,49 +18,82 @@
     10. Salir
 *****************************************************/
 
-
 int main()
 {
     int option = 0;
+    int flag=0;
     LinkedList* listaEmpleados = ll_newLinkedList();
+
     do{
         getInt("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n2. Cargar los datos de los empleados desde el archivo data.bin (modo binario).\n"
                 "3. Alta de empleado.\n4. Modificar datos de empleado.\n5. Baja de empleado.\n6. Listar empleados\n7. Ordenar empleados.\n"
                 "8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
                 "9. Guardar los datos de los empleados en el archivo data.bin (modo binario).\n"
-                "10. Salir\n","Error, opcion incorrecta.\n",1,10,3,&option);
+                "10. Salir\n","\nError, opcion incorrecta.\n",1,10,3,&option);
         system("cls");
         switch(option)
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
+                if (!controller_loadFromText("data.csv",listaEmpleados))
+                {
+                    flag++;
+                }
                 break;
             case 2:
-                controller_loadFromBinary("data.bin",listaEmpleados);
+                if (!controller_loadFromBinary("data.bin",listaEmpleados))
+                {
+                    flag++;
+                }
                 break;
             case 3:
-                controller_addEmployee(listaEmpleados);
+                if (!controller_addEmployee(listaEmpleados))
+                {
+                    flag++;
+                }
                 break;
             case 4:
-                controller_editEmployee(listaEmpleados);
+                if (flag>0)
+                {
+                    controller_editEmployee(listaEmpleados);
+                }else
+                    printf ("\nLista vacia, debe cargar la lista o dar de alta un empleado para poder modificar.\n");
                 break;
             case 5:
-                controller_removeEmployee(listaEmpleados);
+                if (flag>0)
+                {
+                    controller_removeEmployee(listaEmpleados);
+                }else
+                    printf ("\nLista vacia, debe cargar la lista o dar de alta un empleado para poder eliminar.\n");
                 break;
             case 6:
-                controller_ListEmployee(listaEmpleados);
+                if (flag>0)
+                {
+                    controller_ListEmployee(listaEmpleados);
+                }else
+                    printf ("\nLista vacia, debe cargar la lista o dar de alta un empleado para listar.\n");
                 break;
             case 7:
-                printf ("Espere unos segundos mientras se ordena.\n");
-                controller_sortEmployee(listaEmpleados);
+                if (flag>0)
+                {
+                    printf ("Espere unos segundos mientras se ordena.\n");
+                    controller_sortEmployee(listaEmpleados);
+                    controller_ListEmployee(listaEmpleados);
+                }else
+                    printf ("\nLista vacia, debe cargar la lista o dar de alta un empleado para poder ordenar.\n");
                 break;
             case 8:
-                controller_saveAsText("dataBkp.csv",listaEmpleados);
+                if (flag>0)
+                {
+                    controller_saveAsText("data.csv",listaEmpleados);
+                }else
+                    printf ("\nNo se ha cargado nada, no hay nada nuevo que guardar.\n");
                 break;
             case 9:
-                controller_saveAsBinary("data.bin",listaEmpleados);
-                break;
-            case 10:
+                if (flag>0)
+                {
+                    controller_saveAsBinary("data.bin",listaEmpleados);
+                }else
+                    printf ("\nNo se ha cargado nada, no hay nada nuevo que guardar.\n");
                 break;
         }
     }while(option != 10);

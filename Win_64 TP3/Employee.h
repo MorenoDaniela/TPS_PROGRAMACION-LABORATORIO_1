@@ -10,8 +10,8 @@ typedef struct
 
 Employee* employee_new();
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldo);
-Employee* employee_newFileBinario(Employee empleado);
-//void employee_delete();
+Employee* employee_newBinario(Employee empleado);
+
 int employee_delete(Employee* this);
 
 int employee_setId(Employee* this,int id);
